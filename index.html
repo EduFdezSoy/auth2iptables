@@ -9,15 +9,32 @@ If you like what I do thank me on twitter!
         <title>auth2iptables</title>
         <meta charset="ISO-8859-15">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+        <script>
+            $('#reset').click(function() {
+            $('#text').addClass('hide');
+            });
+        </script>
     </head>
     <body>
-        <div>
+        <table>
+            <tr>
+                <td class="iptab">
+                   <iframe name="frame"></iframe> 
+                </td>
+            </tr>
             <form action="auth2iptables.php" method="post" target="frame">
-                
-            </form>
-        </div>
-        <div>
-            <iframe name="frame" style="border:0; height:70%;width:80%"></iframe>
-        </div>
+                <tr id="text">
+                    <td><textarea placeholder="Paste here the content of your auth.log" rows="25" name="auth" required></textarea></td>
+                    <td><textarea placeholder="Paste here your previous iptables rules" rows="25" name="iptables"></textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="reset" value="Reset" id="reset"/>
+                        <input type="submit" value="Process" id="submit"/>
+                    </td>
+                </tr>
+             </form>
+        </table>       
     </body>
 </html>
