@@ -1,5 +1,5 @@
 # auth2iptables
-This web app (is supposed to) transforms an "auth.log" file to iptables rules.
+This web app (is supposed to) transforms an "auth.log" file to iptables rules to prevent brute force attacks.
 
 You upload the "auth.log" file and it will find and catch the ips that try to log in to much times from it.
 Then it will make an "iptables.sh" file with those ips. Also the program will exclude your actual ip from the iptables file.
